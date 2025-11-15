@@ -6,11 +6,11 @@ services:
     container_name: dst-server
     restart: unless-stopped
     ports:
-      - "10999:10999/udp"    # Game server port
-      - "27017:27017/udp"    # Steam master server port
-      - "8767:8767/udp"      # Steam authentication port
+      - "${DST_NETWORK_SERVER_PORT}:${DST_NETWORK_SERVER_PORT}/udp"    # Game server port
+      - "${DST_STEAM_MASTER_SERVER_PORT}:${DST_STEAM_MASTER_SERVER_PORT}/udp"    # Steam master server port
+      - "${DST_STEAM_AUTHENTICATION_PORT}:${DST_STEAM_AUTHENTICATION_PORT}/udp"      # Steam authentication port
     volumes:
-      - ./data:/var/lib/game
+      - ${DST_HOST_DATA_DIR}:/var/lib/game
       - ./logs:/var/log/steam
     environment:
       # Cluster Token - BẮT BUỘC phải có để server hoạt động
