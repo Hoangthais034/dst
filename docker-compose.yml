@@ -10,7 +10,7 @@ services:
       - "${DST_STEAM_MASTER_SERVER_PORT}:${DST_STEAM_MASTER_SERVER_PORT}/udp"    # Steam master server port
       - "${DST_STEAM_AUTHENTICATION_PORT}:${DST_STEAM_AUTHENTICATION_PORT}/udp"      # Steam authentication port
     volumes:
-      - ${DST_HOST_DATA_DIR}:/var/lib/game
+      - /mnt/dst:/var/lib/game
       - ./logs:/var/log/steam
     environment:
       # Cluster Token - BẮT BUỘC phải có để server hoạt động
