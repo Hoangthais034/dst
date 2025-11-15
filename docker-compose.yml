@@ -11,6 +11,7 @@ services:
     volumes:
       - ./data:/data
       - ./logs:/logs
+      - dst-steam:/root/Steam
     environment:
       - DST_SERVER_ARCH=${DST_SERVER_ARCH}
       - DST_SERVER_TOKEN=${DST_SERVER_TOKEN}
@@ -38,6 +39,10 @@ services:
       timeout: 10s
       retries: 3
       start_period: 60s
+
+volumes:
+  dst-steam:
+    driver: local
 
 networks:
   dst-network:
