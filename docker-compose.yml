@@ -4,7 +4,7 @@ services:
   dst-server:
     image: webhippie/dst:latest
     container_name: dst-server
-    restart: no
+    restart: unless-stopped
     ports:
       - "${DST_NETWORK_SERVER_PORT}:${DST_NETWORK_SERVER_PORT}/udp"    # Game server port
       - "${DST_STEAM_MASTER_SERVER_PORT}:${DST_STEAM_MASTER_SERVER_PORT}/udp"    # Steam master server port
