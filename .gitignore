@@ -1,0 +1,33 @@
+# Hướng dẫn (file tiếng Việt, không cần commit lên GitHub)
+HUONG_DAN.md
+
+# File cấu hình môi trường (chứa thông tin nhạy cảm như Cluster Token)
+.env
+.env.local
+.env.*.local
+
+# Dữ liệu game server
+data/
+logs/
+
+# Docker volumes
+*.log
+
+# Hệ điều hành
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+.github
